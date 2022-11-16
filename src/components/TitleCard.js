@@ -4,6 +4,7 @@ import { useState } from "react";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
+//component to title card
 const TitleCard = ({ title, onClick, editClick, deleteClick }) => {
   const [bg, setBg] = useState(
     "linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(137,235,255,1) 72%, rgba(46,220,255,1) 100%)"

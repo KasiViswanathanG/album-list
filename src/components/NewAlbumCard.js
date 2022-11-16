@@ -2,10 +2,13 @@ import React from "react";
 import { Card, TextField, Button, TextareaAutosize } from "@mui/material";
 import { useState } from "react";
 
+//component to create new album
 const NewAlbumCard = () => {
+  // useState to get values entered
   const [title, setTitle] = useState("");
   const [lyrics, setLyrics] = useState("");
   const [userId, setUserId] = useState(1);
+  // post the new album
   const createAlbum = () => {
     fetch("https://jsonplaceholder.typicode.com/posts", {
       method: "POST",

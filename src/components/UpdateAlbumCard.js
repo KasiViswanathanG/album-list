@@ -2,7 +2,9 @@ import React from "react";
 import { Card, TextField, Button, TextareaAutosize } from "@mui/material";
 import { useState, useEffect } from "react";
 
+//component to update album
 function UpdateAlbumCard({ id }) {
+  //fetch particular album
   const [album, setAlbum] = useState({ userId: 0, id: 0, title: "", body: "" });
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
@@ -11,6 +13,7 @@ function UpdateAlbumCard({ id }) {
         setAlbum(json);
       });
   }, [id]);
+  //update the album
   const updateAlbum = () => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
       method: "PUT",

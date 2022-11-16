@@ -6,6 +6,7 @@ import NewAlbumCard from "./components/NewAlbumCard";
 import UpdateAlbumCard from "./components/UpdateAlbumCard";
 
 function App() {
+  //fetch all albums
   var album = { userId: 0, id: 0, title: "", body: "" };
   const [albums, setAlbums] = useState([album]);
   const [selectedAlbum, setSelectedAlbum] = useState(1);

@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
+//component to play album
 const PlayAlbumCard = ({ id, newClick }) => {
+  //fetch datas from server
   const [album, setAlbum] = useState({ userId: 0, id: 0, title: "", body: "" });
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
