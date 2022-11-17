@@ -22,7 +22,12 @@ const NewAlbumCard = () => {
       },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((json) =>
+        alert(`
+      userId - ${userId}
+      title - ${title}
+      lyrics - ${lyrics}`)
+      );
   };
   return (
     <Card

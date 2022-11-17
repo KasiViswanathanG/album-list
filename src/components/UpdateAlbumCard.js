@@ -27,7 +27,12 @@ function UpdateAlbumCard({ id }) {
       },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((json) =>
+        alert(`
+      userId - ${album.userId}
+      title - ${album.title}
+      lyrics - ${album.body}`)
+      );
   };
   return (
     <Card

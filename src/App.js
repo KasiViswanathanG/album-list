@@ -58,7 +58,7 @@ function App() {
                       {
                         method: "DELETE",
                       }
-                    ).then(console.log("Deleted -", album.title));
+                    ).then(alert(`Deleted - ${album.title}`));
                   }}
                 />
               }
